@@ -1,0 +1,31 @@
+.scrollable {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+}
+
+.scrollable-card {
+    margin-right: 20px;
+    width: 250px;
+}
+
+.scroll-container {
+    /*height: 400px;*/
+    height: 35vh;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.dictionary {
+    height: 100%;
+    width: 100%;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: auto;
+}
+
+
+
