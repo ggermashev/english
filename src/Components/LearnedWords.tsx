@@ -1,6 +1,7 @@
 import {Fragment, useState} from "react";
 import "./css/LearnedWords.css"
 import {WordCard} from "./WordCard";
+import {Col, Row} from "react-bootstrap";
 
 export function LearnedWords() {
     const [left1, setLeft1] = useState(0)
@@ -9,25 +10,7 @@ export function LearnedWords() {
     return (
         <Fragment>
             <div className="dictionary">
-                <div className="scroll-container"
-                     onTouchMove={e => {
-                         if (touchX != 0) {
-                             setLeft1(left1 - (touchX - e.touches[0].clientX))
-                         }
-                         setTouchX(e.touches[0].clientX)
-                     }}
-                     onTouchEnd={e => {
-                         setTouchX(0)
-                     }}
-                     onWheel={e => {
-                         if (e.deltaY > 0) {
-                             if ( (document.getElementById("to-learn-last")?.getBoundingClientRect().x || 300) > 0) {
-                                 setLeft1(left1 - 100)
-                             }
-                         } else if (left1 < window.innerWidth - 260) {
-                             setLeft1(left1 + 100)
-                         }
-                     }}>
+                <div className="scroll-container">
                     <h1 className="scroll-title">Нужно выучить</h1>
                     <div className="scrollable" style={{left: left1}}>
                         <div className="scrollable-card">
@@ -77,25 +60,7 @@ export function LearnedWords() {
                         </div>
                     </div>
                 </div>
-                <div className="scroll-container"
-                     onTouchMove={e => {
-                         if (touchX != 0) {
-                             setLeft2(left2 - (touchX - e.touches[0].clientX))
-                         }
-                         setTouchX(e.touches[0].clientX)
-                     }}
-                     onTouchEnd={e => {
-                         setTouchX(0)
-                     }}
-                     onWheel={e => {
-                         if (e.deltaY > 0) {
-                             if ( (document.getElementById("learned-last")?.getBoundingClientRect().x || 300) > 0) {
-                                 setLeft2(left2 - 100)
-                             }
-                         } else if (left2 < window.innerWidth - 260){
-                             setLeft2(left2 + 100)
-                         }
-                     }}>
+                <div className="scroll-container">
                     <h1 className="scroll-title">Пройдено</h1>
                     <div className="scrollable" id="learned" style={{left: left2}}>
                         <div className="scrollable-card">
