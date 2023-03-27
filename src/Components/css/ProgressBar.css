@@ -1,0 +1,26 @@
+.scroll-menu {
+    width: 100vw;
+    position: relative;
+}
+
+.dropdown-menu {
+    position: relative!important;
+    top: -50px;
+}
+
+.drop-btn {
+    position: relative;
+    background-color: #8A96FF;
+    width: 100vw;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.drop-btn:hover {
+    background-color: lightgrey;
+}
+
+.drop-btn:focus .drop-btn:active {
+    background-color: #8A96FF;
+}

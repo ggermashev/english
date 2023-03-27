@@ -8,7 +8,10 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {LearnedWords} from "./Components/LearnedWords";
 import {Progress} from "./Components/Progress";
 import {HTML5Backend} from "react-dnd-html5-backend";
-import {DndProvider} from "react-dnd";
+// import {DndProvider} from "react-dnd";
+import { DndProvider } from 'react-dnd-multi-backend'
+import {Footer} from "./Components/Footer";
+import { HTML5toTouch } from 'rdndmb-html5-to-touch'
 
 const router = createBrowserRouter([
     {
@@ -32,12 +35,12 @@ function App() {
                 <Navigation/>
             </header>
             <main>
-                <DndProvider backend={HTML5Backend}>
+                <DndProvider options={HTML5toTouch}>
                     <RouterProvider router={router}/>
                 </DndProvider>
             </main>
             <footer>
-
+                <Footer/>
             </footer>
         </Fragment>
     );

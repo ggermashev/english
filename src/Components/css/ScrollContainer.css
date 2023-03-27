@@ -1,0 +1,21 @@
+.scrollable {
+    display: flex;
+    flex-direction: row;
+    /*position: relative;*/
+    overflow-x: scroll;
+    position: relative;
+}
+
+.scrollable-card {
+    margin-right: 20px;
+    width: 250px;
+    position: relative;
+}
+
+.scroll-container {
+    height: 35%;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
